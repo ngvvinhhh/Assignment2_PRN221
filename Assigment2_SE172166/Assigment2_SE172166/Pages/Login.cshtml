@@ -1,0 +1,145 @@
+﻿@page
+@model Assigment2_SE172166.Pages.LoginModel
+@{
+}
+
+<body>
+
+    <div class="login-container">
+        <div class="image-section">
+            <img src="/images/candidate-manage.jpg" alt="CandidateManage" class="candidate-image" />
+        </div>
+
+        <div class="login-form-section">
+            <h2>Login</h2>
+            <form method="post" class="login-form">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input name="txtEmail" id="email" type="text" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input name="txtPassword" id="password" type="password" class="form-control" />
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <button type="reset" class="btn btn-danger">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #f0f2f5;
+        height: 100vh;
+    }
+
+    /* Login container - full screen */
+    .login-container {
+        display: flex;
+        width: 100vh;
+        height: 100%; /* Chiếm 100% chiều cao màn hình */
+        background: #ffffff;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        margin-top: 0; /* Bỏ margin-top để login-container không bị đẩy xuống */
+    }
+
+    /* Image section - full size */
+    .image-section {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .candidate-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Login form section */
+    .login-form-section {
+        flex: 1;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .login-form .form-group {
+        margin-bottom: 15px;
+    }
+
+    .login-form label {
+        font-size: 14px;
+        color: #555;
+    }
+
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        transition: border-color 0.3s ease;
+    }
+
+        .login-form input[type="text"]:focus,
+        .login-form input[type="password"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+    .form-actions {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    /* Button styling */
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        color: #ffffff;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+    .btn-danger {
+        background-color: #dc3545;
+        color: #ffffff;
+    }
+
+        .btn-danger:hover {
+            background-color: #b52a37;
+        }
+</style>
